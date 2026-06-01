@@ -3,7 +3,7 @@ import { ArrowRight, Check, Phone, Sparkles } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
 import { services } from "@/lib/services";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import hero from "@/assets/hero-home.jpg";
 import seniorCare from "@/assets/senior-care.jpg";
 import beforeKitchen from "@/assets/before-kitchen.jpg";
@@ -58,7 +58,7 @@ function Index() {
 
               <div className="flex items-center gap-4 mt-7">
                 <div className="size-16 sm:size-20 overflow-hidden rounded-3xl ring-1 ring-border bg-background shadow-soft shrink-0">
-                  <img src={logo.url} alt="Logo" className="size-full object-cover" />
+                  <img src={logo} alt="Logo" className="size-full object-cover" />
                 </div>
                 <div className="font-display text-2xl sm:text-3xl leading-tight">
                   Limhamns

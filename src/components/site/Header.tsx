@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Facebook, Instagram, Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { useLang, type Lang } from "@/lib/i18n";
 import { services } from "@/lib/services";
 
@@ -9,7 +9,7 @@ function Brand() {
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <div className="size-12 overflow-hidden rounded-2xl ring-1 ring-border bg-surface shadow-soft transition-transform group-hover:scale-105">
-        <img src={logo.url} alt="Limhamns Hemhjälp AB" className="size-full object-cover" />
+        <img src={logo} alt="Limhamns Hemhjälp AB" className="size-full object-cover" />
       </div>
       <div className="hidden sm:flex flex-col leading-tight">
         <span className="font-display text-xl text-foreground">Limhamns Hemhjälp</span>

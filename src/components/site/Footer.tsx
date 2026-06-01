@@ -1,5 +1,5 @@
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { useLang } from "@/lib/i18n";
 
 export function Footer() {
@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-6 max-w-sm">
             <div className="flex items-center gap-3">
               <div className="size-12 overflow-hidden rounded-2xl ring-1 ring-border bg-background">
-                <img src={logo.url} alt="" className="size-full object-cover" />
+                <img src={logo} alt="" className="size-full object-cover" />
               </div>
               <div className="leading-tight">
                 <div className="font-display text-xl">Limhamns Hemhjälp</div>
