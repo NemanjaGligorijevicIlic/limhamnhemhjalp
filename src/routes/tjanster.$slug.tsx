@@ -71,25 +71,58 @@ function ServicePage() {
         <div>
           <h2 className="font-display text-3xl lg:text-4xl mb-6">Om tjänsten</h2>
           <div className="space-y-5 text-foreground/80 text-lg leading-relaxed">
-            <p>{t("page.placeholder")}</p>
-            <p>
-              Här fyller du i en mer detaljerad beskrivning av tjänsten, processen och vad som
-              ingår. Bilder från utförda uppdrag kan läggas till i en bildgalleri nedan.
-            </p>
+            {slug === "tradgard" ? (
+              <>
+                <p>{t("svc.tradgard.desc")}</p>
+                <ul className="mt-6 space-y-3">
+                  {["b1", "b2", "b3", "b4", "b5"].map((key) => (
+                    <li key={key} className="flex items-start gap-3">
+                      <div className="size-6 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center mt-0.5">
+                        <Check className="size-3.5" />
+                      </div>
+                      <span className="text-foreground/80">{t(`svc.tradgard.${key}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 p-5 rounded-2xl bg-primary/10 ring-1 ring-primary/20 text-foreground font-medium">
+                  {t("svc.tradgard.note")}
+                </div>
+              </>
+            ) : (
+              <>
+                <p>{t("page.placeholder")}</p>
+                <p>
+                  Här fyller du i en mer detaljerad beskrivning av tjänsten, processen och vad som
+                  ingår. Bilder från utförda uppdrag kan läggas till i en bildgalleri nedan.
+                </p>
+              </>
+            )}
           </div>
 
           <ul className="mt-10 grid sm:grid-cols-2 gap-3">
-            {bullets.map((b) => (
-              <li
-                key={b}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
-              >
-                <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
-                  <Check className="size-4" />
-                </div>
-                <span className="font-medium text-foreground">{b}</span>
-              </li>
-            ))}
+            {slug === "tradgard"
+              ? [t("common.bookCta"), t("common.callUs")].map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
+                  >
+                    <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
+                      <Check className="size-4" />
+                    </div>
+                    <span className="font-medium text-foreground">{b}</span>
+                  </li>
+                ))
+              : bullets.map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
+                  >
+                    <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
+                      <Check className="size-4" />
+                    </div>
+                    <span className="font-medium text-foreground">{b}</span>
+                  </li>
+                ))}
           </ul>
 
           <Link
