@@ -5,6 +5,7 @@ import moving from "@/assets/svc-moving.jpg";
 import renovation from "@/assets/svc-renovation.jpg";
 import clinic from "@/assets/svc-clinic.jpg";
 import garden from "@/assets/svc-garden.jpg";
+import home from "@/assets/svc-office.jpg";
 
 export type ServiceSlug =
   | "kontorstad"
@@ -13,7 +14,8 @@ export type ServiceSlug =
   | "flyttstad"
   | "renovering"
   | "mottagning"
-  | "tradgard";
+  | "tradgard"
+  | "hemstad";
 
 export type Service = {
   slug: ServiceSlug;
@@ -23,6 +25,7 @@ export type Service = {
 };
 
 export const services: Service[] = [
+  { slug: "hemstad",    image: home,       titleKey: "svc.hemstad.title",     shortKey: "svc.hemstad.short" },
   { slug: "kontorstad",  image: office,     titleKey: "svc.kontorstad.title",  shortKey: "svc.kontorstad.short" },
   { slug: "lagerstad",   image: warehouse,  titleKey: "svc.lagerstad.title",   shortKey: "svc.lagerstad.short" },
   { slug: "fonsterputs", image: windows,    titleKey: "svc.fonsterputs.title", shortKey: "svc.fonsterputs.short" },
