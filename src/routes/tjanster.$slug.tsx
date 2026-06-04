@@ -34,6 +34,16 @@ function ServicePage() {
 
   const bullets = ["Erfaren och utbildad personal", "Miljövänliga produkter", "Fast kontaktperson", "Fri offert"];
 
+  const descKey = `svc.${slug}.desc`;
+  const hasDetail = t(descKey) !== descKey;
+  const noteKey = `svc.${slug}.note`;
+  const hasNote = t(noteKey) !== noteKey;
+  const serviceBullets = Array.from({ length: 5 }, (_, i) => {
+    const key = `svc.${slug}.b${i + 1}`;
+    const text = t(key);
+    return text !== key ? text : null;
+  }).filter(Boolean) as string[];
+
   return (
     <Layout>
       <section className="px-4 lg:px-8 pt-4">
@@ -71,22 +81,26 @@ function ServicePage() {
         <div>
           <h2 className="font-display text-3xl lg:text-4xl mb-6">Om tjänsten</h2>
           <div className="space-y-5 text-foreground/80 text-lg leading-relaxed">
-            {slug === "tradgard" ? (
+            {hasDetail ? (
               <>
-                <p>{t("svc.tradgard.desc")}</p>
-                <ul className="mt-6 space-y-3">
-                  {["b1", "b2", "b3", "b4", "b5"].map((key) => (
-                    <li key={key} className="flex items-start gap-3">
-                      <div className="size-6 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center mt-0.5">
-                        <Check className="size-3.5" />
-                      </div>
-                      <span className="text-foreground/80">{t(`svc.tradgard.${key}`)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 p-5 rounded-2xl bg-primary/10 ring-1 ring-primary/20 text-foreground font-medium">
-                  {t("svc.tradgard.note")}
-                </div>
+                <p>{t(descKey)}</p>
+                {serviceBullets.length > 0 && (
+                  <ul className="mt-6 space-y-3">
+                    {serviceBullets.map((text, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className="size-6 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center mt-0.5">
+                          <Check className="size-3.5" />
+                        </div>
+                        <span className="text-foreground/80">{text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {hasNote && (
+                  <div className="mt-6 p-5 rounded-2xl bg-primary/10 ring-1 ring-primary/20 text-foreground font-medium">
+                    {t(noteKey)}
+                  </div>
+                )}
               </>
             ) : (
               <>
@@ -100,29 +114,17 @@ function ServicePage() {
           </div>
 
           <ul className="mt-10 grid sm:grid-cols-2 gap-3">
-            {slug === "tradgard"
-              ? [t("common.bookCta"), t("common.callUs")].map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
-                  >
-                    <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
-                      <Check className="size-4" />
-                    </div>
-                    <span className="font-medium text-foreground">{b}</span>
-                  </li>
-                ))
-              : bullets.map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
-                  >
-                    <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
-                      <Check className="size-4" />
-                    </div>
-                    <span className="font-medium text-foreground">{b}</span>
-                  </li>
-                ))}
+            {bullets.map((b) => (
+              <li
+                key={b}
+                className="flex items-center gap-3 p-4 rounded-2xl bg-surface ring-1 ring-border"
+              >
+                <div className="size-7 shrink-0 rounded-full bg-primary text-primary-foreground grid place-items-center">
+                  <Check className="size-4" />
+                </div>
+                <span className="font-medium text-foreground">{b}</span>
+              </li>
+            ))}
           </ul>
 
           <Link
