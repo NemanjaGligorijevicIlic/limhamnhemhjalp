@@ -23,7 +23,7 @@ const sv: Dict = {
   "pillars.desc2": "Samma välbekanta ansikte vid varje besök — för kontinuitet och lugn i vardagen.",
   "pillars.word3": "Trivsel",
   "pillars.desc3": "När ni känner er omhändertagna skapas en genuin glädje och känsla av välbefinnande.",
-  "pillars.mission": "Vi på Limhamns Hemhjälp AB förstår att trygghet är grunden för ett gott liv — särskilt för våra seniorer. Därför tilldelar vi samma dedikerade medarbetare till varje kund. Den personliga kontakten skapar förtroende, lugn och en genuin känsla av att bli sedd. När ni känner er omhändertagna, blir varje dag lite ljusare."
+  "pillars.mission": "Vi på Limhamns Hemhjälp AB förstår att trygghet är grunden för ett gott liv — särskilt för våra seniorer. Därför tilldelar vi samma dedikerade medarbetare till varje kund. Den personliga kontakten skapar förtroende, lugn och en genuin känsla av att bli sedd. När ni känner er omhändertagna, blir varje dag lite ljusare.",
 
   "services.eyebrow": "Våra Tjänster",
   "services.title": "Vi sköter allt så att ni kan njuta",
