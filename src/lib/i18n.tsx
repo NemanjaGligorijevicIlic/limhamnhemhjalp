@@ -17,6 +17,14 @@ const sv: Dict = {
   "hero.cta": "Boka kostnadsfritt hembesök",
   "hero.cta2": "Se våra tjänster",
 
+  "pillars.word1": "Omsorg",
+  "pillars.desc1": "Varje kund får en personlig medarbetare som lär känna just era behov och önskemål.",
+  "pillars.word2": "Trygghet",
+  "pillars.desc2": "Samma välbekanta ansikte vid varje besök — för kontinuitet och lugn i vardagen.",
+  "pillars.word3": "Trivsel",
+  "pillars.desc3": "När ni känner er omhändertagna skapas en genuin glädje och känsla av välbefinnande.",
+  "pillars.mission": "Vi på Limhamns Hemhjälp AB förstår att trygghet är grunden för ett gott liv — särskilt för våra seniorer. Därför tilldelar vi samma dedikerade medarbetare till varje kund. Den personliga kontakten skapar förtroende, lugn och en genuin känsla av att bli sedd. När ni känner er omhändertagna, blir varje dag lite ljusare.",
+
   "services.eyebrow": "Våra Tjänster",
   "services.title": "Vi sköter allt så att ni kan njuta",
   "services.subtitle":
@@ -88,6 +96,14 @@ const en: Dict = {
     "For a simpler everyday life for seniors. For added security, the same person visits you every time.",
   "hero.cta": "Book a free home visit",
   "hero.cta2": "See our services",
+
+  "pillars.word1": "Care",
+  "pillars.desc1": "Every client is matched with a dedicated team member who learns your unique needs and preferences.",
+  "pillars.word2": "Security",
+  "pillars.desc2": "The same familiar face at every visit — for continuity and peace of mind in your daily life.",
+  "pillars.word3": "Well-being",
+  "pillars.desc3": "Feeling truly looked after brings genuine joy and a deep sense of comfort.",
+  "pillars.mission": "At Limhamns Hemhjälp AB, we believe that security is the foundation of a good life — especially for our seniors. That's why we assign the same dedicated caregiver to every client. This personal bond builds trust, calm, and the genuine feeling of being seen. When you feel cared for, every day becomes a little brighter.",
 
   "services.eyebrow": "Our Services",
   "services.title": "We take care of everything so you can enjoy",
