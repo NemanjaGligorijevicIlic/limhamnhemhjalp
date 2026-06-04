@@ -1,15 +1,31 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsConfigPaths from "vite-tsconfig-paths";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
+import { componentTagger } from "lovable-tagger";
+import { hmrGatePlugin } from "@lovable.dev/vite-plugin-hmr-gate";
+import { devServerBridgePlugin } from "@lovable.dev/vite-plugin-dev-server-bridge";
 
-export default defineConfig({
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+// Plain client-side React SPA.
+// `npm run build` outputs a fully static site into `dist/` that can be
+// uploaded as-is to an S3 bucket (or any static host).
+export default defineConfig(({ command }) => ({
+  plugins: [
+    tsConfigPaths(),
+    tanstackRouter({ target: "react", autoCodeSplitting: true }),
+    react(),
+    tailwindcss(),
+    ...(command === "serve"
+      ? [hmrGatePlugin(), devServerBridgePlugin(), componentTagger()]
+      : []),
+  ],
+  server: {
+    host: "::",
+    port: 8080,
+    strictPort: true,
   },
-});
+  build: {
+    outDir: "dist",
+  },
+}));
