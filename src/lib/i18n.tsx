@@ -46,6 +46,14 @@ const sv: Dict = {
   "svc.tradgard.title": "Trädgård",
   "svc.tradgard.short": "Gräsklippning, häckklippning och trädgårdsskötsel året om.",
 
+  "svc.tradgard.desc": "Vår trädgårdsskötsel hjälper dig att hålla din utomhusmiljö vacker och välskött — utan att du behöver lyfta ett finger. Vi arbetar noggrant, alltid med samma person så att du känner dig trygg.",
+  "svc.tradgard.b1": "Häckklippning – Vi klipper och formar dina häckar så att de hålls tät och välvårdade året om.",
+  "svc.tradgard.b2": "Gräsklippning – En jämn, fin och fräsch gräsmatta vid varje besök.",
+  "svc.tradgard.b3": "Rensning av ogräs, gångar och plattor – Vi rensar ogräs och håller dina gångar och uteplatser rena och fina.",
+  "svc.tradgard.b4": "Lövkrattning – Vi krattar bort löv så att din trädgård alltid ser välvårdad ut.",
+  "svc.tradgard.b5": "Högtryckstvätt – Effektiv rengöring av stenläggning, altaner och fasader.",
+  "svc.tradgard.note": "Gratis bortforsling av trädgårdsavfall ingår under sommarperioden enligt överenskommelse!",
+
   "seniors.eyebrow": "Trygghet i fokus",
   "seniors.title": "Varför seniorer väljer oss",
   "seniors.p1": "Samma person varje gång",
@@ -125,6 +133,14 @@ const en: Dict = {
   "svc.mottagning.short": "Specialist cleaning focused on hygiene and sterility.",
   "svc.tradgard.title": "Garden Care",
   "svc.tradgard.short": "Lawn, hedge and full garden maintenance year-round.",
+
+  "svc.tradgard.desc": "Our garden maintenance keeps your outdoor space beautiful and well-cared-for — without you lifting a finger. We work carefully, always with the same person so you feel safe.",
+  "svc.tradgard.b1": "Hedge trimming – We trim and shape your hedges to keep them dense and neat all year round.",
+  "svc.tradgard.b2": "Lawn mowing – An even, tidy and fresh lawn at every visit.",
+  "svc.tradgard.b3": "Weed and path cleaning – We remove weeds and keep your paths and patios clean and tidy.",
+  "svc.tradgard.b4": "Leaf raking – We rake away leaves so your garden always looks well-kept.",
+  "svc.tradgard.b5": "Pressure washing – Effective cleaning of paving, decking and facades.",
+  "svc.tradgard.note": "Free removal of garden waste is included during the summer period by agreement!",
 
   "seniors.eyebrow": "Safety in focus",
   "seniors.title": "Why seniors choose us",
