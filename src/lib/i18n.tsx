@@ -97,6 +97,14 @@ const en: Dict = {
   "hero.cta": "Book a free home visit",
   "hero.cta2": "See our services",
 
+  "pillars.word1": "Care",
+  "pillars.desc1": "Every client is matched with a dedicated team member who learns your unique needs and preferences.",
+  "pillars.word2": "Security",
+  "pillars.desc2": "The same familiar face at every visit — for continuity and peace of mind in your daily life.",
+  "pillars.word3": "Well-being",
+  "pillars.desc3": "Feeling truly looked after brings genuine joy and a deep sense of comfort.",
+  "pillars.mission": "At Limhamns Hemhjälp AB, we believe that security is the foundation of a good life — especially for our seniors. That's why we assign the same dedicated caregiver to every client. This personal bond builds trust, calm, and the genuine feeling of being seen. When you feel cared for, every day becomes a little brighter.",
+
   "services.eyebrow": "Our Services",
   "services.title": "We take care of everything so you can enjoy",
   "services.subtitle":
