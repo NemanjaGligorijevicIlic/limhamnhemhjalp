@@ -98,6 +98,49 @@ function Index() {
         </div>
       </section>
 
+      {/* THREE PILLARS */}
+      <section className="mx-auto max-w-7xl px-5 lg:px-8 pt-20 lg:pt-28">
+        <div className="relative overflow-hidden rounded-[28px] lg:rounded-[40px] bg-surface ring-1 ring-border px-6 sm:px-10 lg:px-16 py-14 lg:py-20">
+          <div className="grid md:grid-cols-3 gap-10 lg:gap-14 text-center">
+            {[
+              {
+                icon: Heart,
+                word: t("pillars.word1"),
+                desc: t("pillars.desc1"),
+              },
+              {
+                icon: Shield,
+                word: t("pillars.word2"),
+                desc: t("pillars.desc2"),
+              },
+              {
+                icon: Smile,
+                word: t("pillars.word3"),
+                desc: t("pillars.desc3"),
+              },
+            ].map((p, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div className="size-14 rounded-2xl bg-primary text-primary-foreground grid place-items-center shadow-soft mb-5">
+                  <p.icon className="size-7" strokeWidth={1.8} />
+                </div>
+                <h3 className="font-display text-3xl lg:text-4xl text-foreground mb-3">
+                  {p.word}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto text-[15px]">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 lg:mt-16 max-w-3xl mx-auto text-center">
+            <p className="text-foreground/80 text-lg lg:text-xl leading-relaxed">
+              {t("pillars.mission")}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services" className="mx-auto max-w-7xl px-5 lg:px-8 py-28 lg:py-36">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
