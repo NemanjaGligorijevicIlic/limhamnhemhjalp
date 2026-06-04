@@ -45,6 +45,8 @@ const sv: Dict = {
   "svc.mottagning.short": "Specialiststädning med fokus på hygien och sterilitet.",
   "svc.tradgard.title": "Trädgård",
   "svc.tradgard.short": "Gräsklippning, häckklippning och trädgårdsskötsel året om.",
+  "svc.hemstad.title": "Hemstädning",
+  "svc.hemstad.short": "Skräddarsydd hemstädning efter dina önskemål.",
 
   "svc.tradgard.desc": "Vår trädgårdsskötsel hjälper dig att hålla din utomhusmiljö vacker och välskött — utan att du behöver lyfta ett finger. Vi arbetar noggrant, alltid med samma person så att du känner dig trygg.",
   "svc.tradgard.b1": "Häckklippning – Vi klipper och formar dina häckar så att de hålls tät och välvårdade året om.",
@@ -133,6 +135,8 @@ const en: Dict = {
   "svc.mottagning.short": "Specialist cleaning focused on hygiene and sterility.",
   "svc.tradgard.title": "Garden Care",
   "svc.tradgard.short": "Lawn, hedge and full garden maintenance year-round.",
+  "svc.hemstad.title": "Home Cleaning",
+  "svc.hemstad.short": "Tailored home cleaning according to your wishes.",
 
   "svc.tradgard.desc": "Our garden maintenance keeps your outdoor space beautiful and well-cared-for — without you lifting a finger. We work carefully, always with the same person so you feel safe.",
   "svc.tradgard.b1": "Hedge trimming – We trim and shape your hedges to keep them dense and neat all year round.",
