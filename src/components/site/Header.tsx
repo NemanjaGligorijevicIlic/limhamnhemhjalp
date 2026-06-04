@@ -47,7 +47,7 @@ function Socials() {
   return (
     <div className="flex items-center gap-1">
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/limhamnshemhjalp"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook"
