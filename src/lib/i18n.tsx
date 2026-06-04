@@ -52,7 +52,7 @@ const sv: Dict = {
   "svc.tradgard.b3": "Rensning av ogräs, gångar och plattor – Vi rensar ogräs och håller dina gångar och uteplatser rena och fina.",
   "svc.tradgard.b4": "Lövkrattning – Vi krattar bort löv så att din trädgård alltid ser välvårdad ut.",
   "svc.tradgard.b5": "Högtryckstvätt – Effektiv rengöring av stenläggning, altaner och fasader.",
-  "svc.tradgard.note": "Gratis bortforsling av trädgårdsavfall ingår under sommarperioden enligt överenskommelse!",
+  "svc.tradgard.note": "Gratis bortforsling av trädgårdsavfall ingår under sommarperioden enligt överenskommelse!",,
 
   "seniors.eyebrow": "Trygghet i fokus",
   "seniors.title": "Varför seniorer väljer oss",
@@ -140,7 +140,7 @@ const en: Dict = {
   "svc.tradgard.b3": "Weed and path cleaning – We remove weeds and keep your paths and patios clean and tidy.",
   "svc.tradgard.b4": "Leaf raking – We rake away leaves so your garden always looks well-kept.",
   "svc.tradgard.b5": "Pressure washing – Effective cleaning of paving, decking and facades.",
-  "svc.tradgard.note": "Free removal of garden waste is included during the summer period by agreement!",
+  "svc.tradgard.note": "Free removal of garden waste is included during the summer period by agreement!",,
 
   "seniors.eyebrow": "Safety in focus",
   "seniors.title": "Why seniors choose us",
