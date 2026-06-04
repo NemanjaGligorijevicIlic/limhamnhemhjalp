@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Heart, Phone, Shield, Smile, Sparkles } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
 import { services } from "@/lib/services";
