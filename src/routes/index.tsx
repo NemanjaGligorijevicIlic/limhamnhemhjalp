@@ -6,10 +6,10 @@ import { services } from "@/lib/services";
 import logo from "@/assets/logo.png";
 import hero from "@/assets/hero-home.jpg";
 import seniorCare from "@/assets/senior-care.jpg";
-import beforeKitchen from "@/assets/before-kitchen.jpg";
-import afterKitchen from "@/assets/after-kitchen.jpg";
-import beforeGarden from "@/assets/before-garden.jpg";
-import afterGarden from "@/assets/after-garden.jpg";
+import beforeGardJson from "@/assets/gard_innan.jpg.asset.json";
+import afterGardJson from "@/assets/gard_efter.jpg.asset.json";
+import beforeWindowJson from "@/assets/fonster_innan.jpg.asset.json";
+import afterWindowJson from "@/assets/fonster_efter_1.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
