@@ -261,15 +261,15 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <BeforeAfter
-            before={beforeKitchen}
-            after={afterKitchen}
-            title="Kökssanering i Limhamn"
+            before={beforeGardJson.url}
+            after={afterGardJson.url}
+            title="Upprustning av gård"
             t={t}
           />
           <BeforeAfter
-            before={beforeGarden}
-            after={afterGarden}
-            title="Höstfix i trädgården"
+            before={beforeWindowJson.url}
+            after={afterWindowJson.url}
+            title="Fönsterputs"
             t={t}
           />
         </div>
