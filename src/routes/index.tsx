@@ -261,14 +261,14 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <BeforeAfter
-            before={beforeGardJson.url}
-            after={afterGardJson.url}
+            before={beforeGard}
+            after={afterGard}
             title="Upprustning av gård"
             t={t}
           />
           <BeforeAfter
-            before={beforeWindowJson.url}
-            after={afterWindowJson.url}
+            before={beforeWindow}
+            after={afterWindow}
             title="Fönsterputs"
             t={t}
           />
