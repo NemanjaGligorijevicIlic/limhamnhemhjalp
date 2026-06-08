@@ -6,10 +6,10 @@ import { services } from "@/lib/services";
 import logo from "@/assets/logo.png";
 import hero from "@/assets/hero-home.jpg";
 import seniorCare from "@/assets/senior-care.jpg";
-import beforeGardJson from "@/assets/gard_innan.jpg.asset.json";
-import afterGardJson from "@/assets/gard_efter.jpg.asset.json";
-import beforeWindowJson from "@/assets/fonster_innan.jpg.asset.json";
-import afterWindowJson from "@/assets/fonster_efter_1.jpg.asset.json";
+import beforeGardJson from "@/assets/gard_innan.jpg";
+import afterGardJson from "@/assets/gard_efter.jpg";
+import beforeWindowJson from "@/assets/fonster_innan.jpg";
+import afterWindowJson from "@/assets/fonster_efter_1.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -261,14 +261,14 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <BeforeAfter
-            before={beforeGardJson.url}
-            after={afterGardJson.url}
+            before={beforeGardJson}
+            after={afterGardJson}
             title="Upprustning av gård"
             t={t}
           />
           <BeforeAfter
-            before={beforeWindowJson.url}
-            after={afterWindowJson.url}
+            before={beforeWindowJson}
+            after={afterWindowJson}
             title="Fönsterputs"
             t={t}
           />
