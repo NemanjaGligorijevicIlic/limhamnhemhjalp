@@ -27,23 +27,23 @@ export const Route = createFileRoute("/projekt")({
 type ProjectImage = { src: string; tag?: "before" | "after" };
 
 type Project = {
-  title: string;
-  desc: string;
+  titleKey: string;
+  descKey: string;
   images: ProjectImage[];
 };
 
 const projects: Project[] = [
   {
-    title: "Upprustning av gård",
-    desc: "En försummad och igenvuxen gårdsremsa rensades helt från ogräs och fick en ren, välskött grusyta.",
+    titleKey: "proj.gard.title",
+    descKey: "proj.gard.desc",
     images: [
       { src: gardInnan, tag: "before" },
       { src: gardEfter, tag: "after" },
     ],
   },
   {
-    title: "Fönsterputs",
-    desc: "Smutsiga och fläckiga fönster putsades till ett kristallklart resultat — både inifrån och utifrån.",
+    titleKey: "proj.fonster.title",
+    descKey: "proj.fonster.desc",
     images: [
       { src: fonsterInnan, tag: "before" },
       { src: fonsterEfter1, tag: "after" },
@@ -51,8 +51,8 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Trädgårdsskötsel",
-    desc: "En av de trädgårdar vi sköter löpande — gräsklippning, häckklippning och skötsel året om.",
+    titleKey: "proj.skotsel.title",
+    descKey: "proj.skotsel.desc",
     images: [{ src: gard }],
   },
 ];
