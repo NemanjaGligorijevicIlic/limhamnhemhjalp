@@ -147,14 +147,6 @@ function ServicePage() {
               className="size-full object-cover"
             />
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="aspect-square rounded-3xl bg-surface ring-1 ring-border grid place-items-center text-muted-foreground text-sm">
-              Bild kommer
-            </div>
-            <div className="aspect-square rounded-3xl bg-surface ring-1 ring-border grid place-items-center text-muted-foreground text-sm">
-              Bild kommer
-            </div>
-          </div>
         </div>
       </section>
 
