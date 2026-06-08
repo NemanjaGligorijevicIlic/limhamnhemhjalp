@@ -27,23 +27,23 @@ export const Route = createFileRoute("/projekt")({
 type ProjectImage = { src: string; tag?: "before" | "after" };
 
 type Project = {
-  title: string;
-  desc: string;
+  titleKey: string;
+  descKey: string;
   images: ProjectImage[];
 };
 
 const projects: Project[] = [
   {
-    title: "Upprustning av gård",
-    desc: "En försummad och igenvuxen gårdsremsa rensades helt från ogräs och fick en ren, välskött grusyta.",
+    titleKey: "proj.gard.title",
+    descKey: "proj.gard.desc",
     images: [
       { src: gardInnan, tag: "before" },
       { src: gardEfter, tag: "after" },
     ],
   },
   {
-    title: "Fönsterputs",
-    desc: "Smutsiga och fläckiga fönster putsades till ett kristallklart resultat — både inifrån och utifrån.",
+    titleKey: "proj.fonster.title",
+    descKey: "proj.fonster.desc",
     images: [
       { src: fonsterInnan, tag: "before" },
       { src: fonsterEfter1, tag: "after" },
@@ -51,8 +51,8 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Trädgårdsskötsel",
-    desc: "En av de trädgårdar vi sköter löpande — gräsklippning, häckklippning och skötsel året om.",
+    titleKey: "proj.skotsel.title",
+    descKey: "proj.skotsel.desc",
     images: [{ src: gard }],
   },
 ];
@@ -78,7 +78,7 @@ function ProjectsPage() {
       <section className="mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28 space-y-20">
         {projects.map((p, i) => (
           <article
-            key={p.title}
+            key={p.titleKey}
             className={`grid lg:grid-cols-2 gap-10 items-center ${
               i % 2 === 1 ? "lg:[&>:first-child]:order-2" : ""
             }`}
@@ -103,7 +103,7 @@ function ProjectsPage() {
                 >
                   <img
                     src={img.src}
-                    alt={`${p.title} ${img.tag ? t(`projects.${img.tag}`) : ""}`}
+                    alt={`${t(p.titleKey)} ${img.tag ? t(`projects.${img.tag}`) : ""}`}
                     loading="lazy"
                     className="size-full object-cover"
                   />
@@ -123,10 +123,10 @@ function ProjectsPage() {
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
-                Projekt {String(i + 1).padStart(2, "0")}
+                {t("proj.label")} {String(i + 1).padStart(2, "0")}
               </div>
-              <h2 className="font-display text-3xl lg:text-4xl mb-4">{p.title}</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">{p.desc}</p>
+              <h2 className="font-display text-3xl lg:text-4xl mb-4">{t(p.titleKey)}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">{t(p.descKey)}</p>
             </div>
           </article>
         ))}
