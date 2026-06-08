@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
-import gardInnan from "@/assets/gard_innan.jpg.asset.json";
-import gardEfter from "@/assets/gard_efter.jpg.asset.json";
-import fonsterInnan from "@/assets/fonster_innan.jpg.asset.json";
-import fonsterEfter1 from "@/assets/fonster_efter_1.jpg.asset.json";
-import fonsterEfter2 from "@/assets/fonster_efter_2.jpg.asset.json";
-import gard from "@/assets/gard.jpg.asset.json";
+import gardInnan from "@/assets/gard_innan.jpg";
+import gardEfter from "@/assets/gard_efter.jpg";
+import fonsterInnan from "@/assets/fonster_innan.jpg";
+import fonsterEfter1 from "@/assets/fonster_efter_1.jpg";
+import fonsterEfter2 from "@/assets/fonster_efter_2.jpg";
+import gard from "@/assets/gard.jpg";
 
 export const Route = createFileRoute("/projekt")({
   head: () => ({
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/projekt")({
         content: "Se före- och efterbilder från riktiga projekt utförda av Limhamns Hemhjälp AB.",
       },
       { property: "og:title", content: "Projekt — Före & Efter | Limhamns Hemhjälp" },
-      { property: "og:image", content: gardEfter.url },
+      { property: "og:image", content: gardEfter },
     ],
     links: [{ rel: "canonical", href: "/projekt" }],
   }),
@@ -37,23 +37,23 @@ const projects: Project[] = [
     title: "Upprustning av gård",
     desc: "En försummad och igenvuxen gårdsremsa rensades helt från ogräs och fick en ren, välskött grusyta.",
     images: [
-      { src: gardInnan.url, tag: "before" },
-      { src: gardEfter.url, tag: "after" },
+      { src: gardInnan, tag: "before" },
+      { src: gardEfter, tag: "after" },
     ],
   },
   {
     title: "Fönsterputs",
     desc: "Smutsiga och fläckiga fönster putsades till ett kristallklart resultat — både inifrån och utifrån.",
     images: [
-      { src: fonsterInnan.url, tag: "before" },
-      { src: fonsterEfter1.url, tag: "after" },
-      { src: fonsterEfter2.url, tag: "after" },
+      { src: fonsterInnan, tag: "before" },
+      { src: fonsterEfter1, tag: "after" },
+      { src: fonsterEfter2, tag: "after" },
     ],
   },
   {
     title: "Trädgårdsskötsel",
     desc: "En av de trädgårdar vi sköter löpande — gräsklippning, häckklippning och skötsel året om.",
-    images: [{ src: gard.url }],
+    images: [{ src: gard }],
   },
 ];
 

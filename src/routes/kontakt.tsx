@@ -24,7 +24,7 @@ function ContactPage() {
   const items = [
     { icon: MapPin, label: t("footer.address"), value: "Västanväg 41, 216 13 Limhamn" },
     { icon: Phone, label: t("footer.phone"), value: "070-318 82 50", href: "tel:+46703188250" },
-    { icon: Mail, label: "Email", value: "info@limhamnshemhjalp.se", href: "mailto:info@limhamnshemhjalp.se" },
+    { icon: Mail, label: "Email", value: "limhamns.hemhjalp@gmail.com", href: "mailto:limhamns.hemhjalp@gmail.com" },
     { icon: Building2, label: t("footer.org"), value: "559322-2432 · F-skatt" },
   ];
 
