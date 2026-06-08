@@ -125,6 +125,14 @@ const sv: Dict = {
   "projects.after": "EFTER",
   "projects.viewall": "Se alla projekt",
 
+  "proj.gard.title": "Upprustning av gård",
+  "proj.gard.desc": "En försummad och igenvuxen gårdsremsa rensades helt från ogräs och fick en ren, välskött grusyta.",
+  "proj.fonster.title": "Fönsterputs",
+  "proj.fonster.desc": "Smutsiga och fläckiga fönster putsades till ett kristallklart resultat — både inifrån och utifrån.",
+  "proj.skotsel.title": "Trädgårdsskötsel",
+  "proj.skotsel.desc": "En av de trädgårdar vi sköter löpande — gräsklippning, häckklippning och skötsel året om.",
+  "proj.label": "Projekt",
+
   "footer.tagline":
     "Vi skapar en tryggare vardag för Limhamns seniorer genom personlig service och omsorg.",
   "footer.contact": "Kontakt",
@@ -264,6 +272,14 @@ const en: Dict = {
   "projects.before": "BEFORE",
   "projects.after": "AFTER",
   "projects.viewall": "View all projects",
+
+  "proj.gard.title": "Garden restoration",
+  "proj.gard.desc": "A neglected and overgrown strip of yard was completely cleared of weeds and given a clean, well-kept gravel surface.",
+  "proj.fonster.title": "Window cleaning",
+  "proj.fonster.desc": "Dirty and stained windows were polished to a crystal-clear result — both inside and out.",
+  "proj.skotsel.title": "Garden maintenance",
+  "proj.skotsel.desc": "One of the gardens we maintain regularly — lawn mowing, hedge trimming and care all year round.",
+  "proj.label": "Project",
 
   "footer.tagline":
     "We create a safer everyday life for Limhamn's seniors through personal service and care.",
