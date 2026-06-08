@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
-import beforeKitchen from "@/assets/before-kitchen.jpg";
-import afterKitchen from "@/assets/after-kitchen.jpg";
-import beforeGarden from "@/assets/before-garden.jpg";
-import afterGarden from "@/assets/after-garden.jpg";
-import beforeWindows from "@/assets/before-windows.jpg";
-import afterWindows from "@/assets/after-windows.jpg";
+import gardInnan from "@/assets/gard_innan.jpg.asset.json";
+import gardEfter from "@/assets/gard_efter.jpg.asset.json";
+import fonsterInnan from "@/assets/fonster_innan.jpg.asset.json";
+import fonsterEfter1 from "@/assets/fonster_efter_1.jpg.asset.json";
+import fonsterEfter2 from "@/assets/fonster_efter_2.jpg.asset.json";
+import gard from "@/assets/gard.jpg.asset.json";
 
 export const Route = createFileRoute("/projekt")({
   head: () => ({
@@ -14,33 +14,46 @@ export const Route = createFileRoute("/projekt")({
       { title: "Projekt — Före & Efter | Limhamns Hemhjälp AB" },
       {
         name: "description",
-        content: "Se före- och efterbilder från projekt utförda av Limhamns Hemhjälp AB.",
+        content: "Se före- och efterbilder från riktiga projekt utförda av Limhamns Hemhjälp AB.",
       },
       { property: "og:title", content: "Projekt — Före & Efter | Limhamns Hemhjälp" },
+      { property: "og:image", content: gardEfter.url },
     ],
     links: [{ rel: "canonical", href: "/projekt" }],
   }),
   component: ProjectsPage,
 });
 
-const projects = [
+type ProjectImage = { src: string; tag?: "before" | "after" };
+
+type Project = {
+  title: string;
+  desc: string;
+  images: ProjectImage[];
+};
+
+const projects: Project[] = [
   {
-    title: "Kökssanering i Limhamn",
-    desc: "Genomgående djuprengöring av kök efter längre tids försummelse.",
-    before: beforeKitchen,
-    after: afterKitchen,
+    title: "Upprustning av gård",
+    desc: "En försummad och igenvuxen gårdsremsa rensades helt från ogräs och fick en ren, välskött grusyta.",
+    images: [
+      { src: gardInnan.url, tag: "before" },
+      { src: gardEfter.url, tag: "after" },
+    ],
   },
   {
-    title: "Trädgårdsupprustning",
-    desc: "Klippning, ogräsrensning och nya rabatter i en villaträdgård.",
-    before: beforeGarden,
-    after: afterGarden,
+    title: "Fönsterputs",
+    desc: "Smutsiga och fläckiga fönster putsades till ett kristallklart resultat — både inifrån och utifrån.",
+    images: [
+      { src: fonsterInnan.url, tag: "before" },
+      { src: fonsterEfter1.url, tag: "after" },
+      { src: fonsterEfter2.url, tag: "after" },
+    ],
   },
   {
-    title: "Fönsterputs på kontor",
-    desc: "Kristallklara fönster i en kontorslokal i centrala Malmö.",
-    before: beforeWindows,
-    after: afterWindows,
+    title: "Trädgårdsskötsel",
+    desc: "En av de trädgårdar vi sköter löpande — gräsklippning, häckklippning och skötsel året om.",
+    images: [{ src: gard.url }],
   },
 ];
 
@@ -70,24 +83,43 @@ function ProjectsPage() {
               i % 2 === 1 ? "lg:[&>:first-child]:order-2" : ""
             }`}
           >
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-border">
-                <img
-                  src={p.before}
-                  alt="Före"
-                  loading="lazy"
-                  className="size-full object-cover"
-                />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 backdrop-blur text-[10px] font-bold tracking-widest text-foreground">
-                  {t("projects.before")}
-                </span>
-              </div>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-border">
-                <img src={p.after} alt="Efter" loading="lazy" className="size-full object-cover" />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold tracking-widest">
-                  {t("projects.after")}
-                </span>
-              </div>
+            <div
+              className={`grid gap-3 ${
+                p.images.length >= 3
+                  ? "grid-cols-2"
+                  : p.images.length === 2
+                  ? "grid-cols-2"
+                  : "grid-cols-1"
+              }`}
+            >
+              {p.images.map((img, idx) => (
+                <div
+                  key={idx}
+                  className={`relative overflow-hidden rounded-3xl ring-1 ring-border ${
+                    p.images.length === 3 && idx === 0
+                      ? "col-span-2 aspect-[16/10]"
+                      : "aspect-[4/5]"
+                  } ${p.images.length === 1 ? "aspect-[16/10]" : ""}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={`${p.title} ${img.tag ? t(`projects.${img.tag}`) : ""}`}
+                    loading="lazy"
+                    className="size-full object-cover"
+                  />
+                  {img.tag && (
+                    <span
+                      className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest ${
+                        img.tag === "before"
+                          ? "bg-background/90 backdrop-blur text-foreground"
+                          : "bg-primary text-primary-foreground"
+                      }`}
+                    >
+                      {t(`projects.${img.tag}`)}
+                    </span>
+                  )}
+                </div>
+              ))}
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
