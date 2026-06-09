@@ -5,7 +5,7 @@ import moving from "@/assets/svc-moving.jpg";
 import renovation from "@/assets/svc-renovation.jpg";
 import clinic from "@/assets/svc-clinic.jpg";
 import garden from "@/assets/svc-garden.jpg";
-import home from "@/assets/svc-office.jpg";
+import home from "@/assets/svc-home.jpg";
 
 export type ServiceSlug =
   | "kontorstad"
