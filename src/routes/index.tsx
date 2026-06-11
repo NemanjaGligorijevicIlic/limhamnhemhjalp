@@ -67,12 +67,12 @@ function Index() {
                 </div>
               </div>
 
-              <p className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl text-foreground text-balance">
-                {t("hero.title")}
-              </p>
-              <h1 className="mt-3 block text-xl sm:text-2xl lg:text-3xl text-primary font-display">
+              <h1 className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl text-foreground text-balance">
                 Städning och Trädgårdsskötsel i Malmö
               </h1>
+              <h2 className="mt-3 block text-xl sm:text-2xl lg:text-3xl text-primary font-display">
+                {t("hero.title")}
+              </h2>
               <p className="mt-6 text-lg lg:text-xl text-foreground/80 leading-relaxed max-w-prose">
                 {t("hero.subtitle")}
               </p>
